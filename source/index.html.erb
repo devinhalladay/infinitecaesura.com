@@ -1,7 +1,25 @@
----
-title: Welcome to Middleman
----
+<% blog.articles.each do |article| %>
+  <article>
+    <div class="article-head">
+      <h1 class="article-title">
+        <%= link_to article.title, article %>
+      </h1>
+      <p class="article-subtitle">
+        <%= article.data.subtitle if article.data.subtitle %>
+      </p>
+    </div>
 
-<h1>
-  Middleman is Running
-</h1>
+    <ul class="article-meta">
+      <li>Devin Halladay &middot;</li>
+      <li><%= article.date.strftime('%Y') %> &middot;</li>
+      <li>Aesthetics</li>
+      <li>Certain</li>
+    </ul>
+
+    <p class="article-abstract">
+      <%= article.data.abstract if article.data.abstract %>
+    </p>
+
+    <a href="<%= article.url %>">Read more</a>
+  </article>
+<% end %>

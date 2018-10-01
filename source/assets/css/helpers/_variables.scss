@@ -1,0 +1,13 @@
+$grid-columns: 12;
+$grid-template-columns: repeat($grid-columns, 1fr);
+$grid-column-gap: 15px;
+$grid-row-gap: 15px;
+
+$color-site: #1E7EFF;
+$color-dark: #151515;
+$color-text: #151515;
+$color-meta: #909090;
+
+$font-monospace: "odisseia", "Source Code Pro", "Monaco", monospace;
+$font-sans-serif: "Neue Haas Unica", "BlinkMacSystemFont", -apple-system, "Helvetica Neue", Helvetica, sans-serif;
+$font-serif: $font-sans-serif;

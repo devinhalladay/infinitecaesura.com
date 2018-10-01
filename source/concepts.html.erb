@@ -1,0 +1,11 @@
+<h1>Tags</h1>
+<% blog.tags.sort.each do |tag, articles| %>
+  <div>
+    <h2><%= link_to "#{tag} (#{articles.size})", tag_path(tag) %></h2>
+    <ul>
+    <% articles.sort_by(&:title).each do |article| %>
+        <li><%= link_to article.title, article %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>

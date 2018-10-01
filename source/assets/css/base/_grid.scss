@@ -1,0 +1,23 @@
+.container {
+  margin: 0 auto;
+  max-width: 1520px;
+  width: 86vw;
+
+  @media (max-width: 700px) {
+    width: 80vw;
+  }
+}
+
+.grid, %grid {
+  display: grid;
+  height: 100%;
+  grid-template-columns: $grid-template-columns;
+  grid-gap: $grid-row-gap $grid-column-gap;
+
+  // Syncopated grid below
+  // grid-template-columns: 1.5fr 0.5fr 1.8fr 0.5fr 0.2fr 1fr 0.2fr 1.4fr 2.4fr;
+}
+
+.row, %row {
+  grid-column: span $grid-columns;
+}

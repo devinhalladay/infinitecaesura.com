@@ -1,0 +1,23 @@
+html {
+  font: 108.25%/1.7 $font-sans-serif;
+  color: $color-text;
+  background-color: #fff;
+  -webkit-font-smoothing: antialiased;
+  -webkit-font-feature-settings: "onum";
+          font-feature-settings: "onum";
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
+
+  @media (max-width: 30rem) {
+    html {
+      font-size: 87.5%;
+    }
+  }
+}
+
+body {
+  border-left: 10px solid $color-site;
+  border-right: 10px solid $color-site;
+  min-height: 100vh;
+}

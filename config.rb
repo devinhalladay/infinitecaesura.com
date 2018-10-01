@@ -17,10 +17,12 @@ set :fonts_dir, "assets/fonts"
 
 # Activate Blog
 activate :blog do |b|
-  b.sources = "articles/{year}-{month}-{day}-{title}.html"
+  b.sources = "posts/{year}-{month}-{day}-{title}.html"
+  b.taglink = "concepts/{tag}.html"
+  b.tag_template = "concept.html"
   b.permalink = "{title}"
   b.name = @app.data.site.title
-  b.layout = "article"
+  b.layout = "post"
 end
 
 # Activate directory indexes for clean URLs
