@@ -1,9 +1,9 @@
 <% blog.articles.each do |article| %>
   <article>
     <div class="article-head">
-      <h1 class="article-title">
+      <h2 class="article-title">
         <%= link_to article.title, article %>
-      </h1>
+      </h2>
       <p class="article-subtitle">
         <%= article.data.subtitle if article.data.subtitle %>
       </p>

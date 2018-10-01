@@ -30,7 +30,7 @@
     <link rel="stylesheet" href="https://use.typekit.net/lbu2tns.css">
     <%= javascript_include_tag "site", :async => true %>
   </head>
-  <body class="<%= page_classes %>">
+  <body class="<%= page_classes %> <%= blog.options[:layout] %>">
     <div class="container grid">
       <%= partial "partials/header" %>
       <%= yield %>

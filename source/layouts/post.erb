@@ -1,0 +1,29 @@
+---
+customClass: "article-page"
+---
+
+<% wrap_layout :layout do %>
+  <article>
+    <section class="article-head">
+      <small class="article-date"><%= current_page.date.strftime('%Y') %> &middot; <strong>Epistemic Status:</strong> <%= current_page.data.epistemic_status %></small>
+      <div class="article-title">
+        <h1><%= current_page.title %></h1>
+      </div>
+
+      <div class="article-meta">
+        <% if current_page.data.subtitle %>
+        <h2 class="article-subtitle"><%= current_page.data.subtitle %></h2>
+        <% end %>
+        <p class="article-author"><a href="http://devinhalladay.com">Devin Halladay</a></p>
+        <ul class="article-concepts">
+          <% current_page.tags.each do |tag| %>
+            <li><%= link_to tag.capitalize, tag_path(tag) %></li>
+          <% end %>
+        </ul>
+      </div>
+    </section>
+
+    <%= yield %>
+
+  </article>
+<% end %>
