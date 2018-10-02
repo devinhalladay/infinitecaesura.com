@@ -1,0 +1,31 @@
+
+<article class="row">
+  <section class="article-head">
+    <div class="article-title">
+      <a href="<%= article.url %>"><h1><%= article.title %></h1></a>
+      <% if article.data.subtitle %>
+      <h2 class="article-subtitle"><%= article.data.subtitle %></h2>
+      <% end %>
+    </div>
+
+    <div class="article-meta">
+      <small class="article-date">
+        <%= article.date.strftime('%Y') %>
+      </small>
+      <!-- <small><strong>Epistemic Status:</strong> <%= article.data.epistemic_status %></small> -->
+      <ul class="article-concepts">
+        <% article.tags.each do |tag| %>
+          <li><%= link_to tag.capitalize, tag_path(tag) %></li>
+        <% end %>
+      </ul>
+    </div>
+  </section>
+
+  <% if article.data.abstract %>
+    <p class="article-abstract">
+      <%= article.data.abstract %>
+    </p>
+
+    <a href="<%= article.url %>">Read more…</a>
+  <% end %>
+</article>

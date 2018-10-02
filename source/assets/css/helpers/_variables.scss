@@ -1,5 +1,6 @@
 $grid-columns: 12;
-$grid-template-columns: repeat($grid-columns, 1fr);
+$grid-columns-corrected: 10;
+// $grid-template-columns: [grid-start] 1fr repeat($grid-columns-corrected, 1fr) [grid-end] 1fr;
 $grid-column-gap: 15px;
 $grid-row-gap: 15px;
 
@@ -8,6 +9,6 @@ $color-dark: #151515;
 $color-text: #151515;
 $color-meta: #909090;
 
-$font-monospace: "odisseia", "Source Code Pro", "Monaco", monospace;
 $font-sans-serif: "Neue Haas Unica", "BlinkMacSystemFont", -apple-system, "Helvetica Neue", Helvetica, sans-serif;
 $font-serif: $font-sans-serif;
+$font-monospace: $font-sans-serif;

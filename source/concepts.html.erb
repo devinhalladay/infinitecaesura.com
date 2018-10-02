@@ -1,11 +1,21 @@
-<h1>Tags</h1>
-<% blog.tags.sort.each do |tag, articles| %>
-  <div>
-    <h2><%= link_to "#{tag} (#{articles.size})", tag_path(tag) %></h2>
-    <ul>
-    <% articles.sort_by(&:title).each do |article| %>
-        <li><%= link_to article.title, article %></li>
-    <% end %>
-    </ul>
-  </div>
-<% end %>
+---
+title: Concepts
+layout: default_layout
+---
+
+<div class="main-column">
+  <h1>Concepts</h1>
+  <p class="intro">The entries on this site are all organized by concept. These concepts act both as organizational taxonomies and as framing devices for understanding the content in an article before reading it. My hope is that as this site grows, each concept will develop its own canonical posts.</p>
+
+  <% grouped_tags = blog.tags.sort.group_by {|tag| tag[0][0]} %>
+
+  <% grouped_tags.each do |letter, tags| %>
+    <div class="concept-block">
+      <h3><%= letter.upcase %></h3>
+
+      <% tags.each do |tag, articles| %>
+        <p><%= link_to "#{tag.capitalize}", tag_path(tag) %></p>
+      <% end %>
+    </div>
+  <% end %>
+</div>

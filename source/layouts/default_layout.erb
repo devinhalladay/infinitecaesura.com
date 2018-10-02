@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+  <head>
+    <%= partial "partials/meta" %>
+  </head>
+  <body class="<%= page_classes %> <%= current_page.options[:layout] %>">
+    <div class="container grid">
+      <%= partial "partials/header" %>
+      <%= yield %>
+    </div>
+  </body>
+</html>

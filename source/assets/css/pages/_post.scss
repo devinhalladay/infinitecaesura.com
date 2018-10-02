@@ -1,10 +1,16 @@
 .post {
   .article-head {
     grid-column: 3 / 10;
-    padding-bottom: 60px;
+    padding-bottom: 40px;
 
     @media (max-width: 700px) {
       grid-column: 1 / 10;
+    }
+  }
+
+  .article-body {
+    p + p {
+      padding-top: 1.2em;
     }
   }
 
@@ -45,7 +51,7 @@
       font-size: 1.2em;
     }
 
-    .article-concepts {
+    .article-concepts, %article-concepts {
       li {
         color: $color-meta;
         font-size: 1.2em;

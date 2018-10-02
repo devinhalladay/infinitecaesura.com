@@ -2,13 +2,23 @@
 title: In the Maelstrom
 subtitle: "An Interrogation of Efficiency, Automation, and Their Aesthetics"
 abstract: "Automated technologies have always produced their own aesthetics of the machinery of work. With the rise of new media and digital technology, the aesthetics of automation have become something entirely different: encoded ideological signifiers with the sole goal of making us work more without noticing a shift in work hours or intensity."
-tags: aesthetics
+tags: aesthetics, privacy
 epistemic_status: Certain
 ---
 
-> *The error of imaginary causes.* To begin with dreams: *ex post facto*, a cause is slipped under a particular sensation. \[…] What has happened? The representations which were *produced* by a certain state have been misunderstood as its causes.
-> Most of our general feelings…excite our causal instinct: we want to have a reason for feeling this way or that—for feeling bad or for feeling good. \[…] First principle: any explanation is better than none. Since at bottom it is merely a matter of wishing to be rid of oppressive representations, one is not too particular about the means of getting rid of them: the first representation that explains the unknown as familiar feels sos good that one “considers it true.” The proof of pleasure (“of strength”) as the criterion of truth.
-> \[…] That which is new and strange and has not been experienced before, is excluded as a cause. Thus one searches for some kind of explanation to serve as a cause, but for a particularly selected and preferred kind of explanation—that which has most quickly and most frequently abolished the feeling of the strange, the new, and hitherto unexperienced: the *most habitual* explanations. Consequence: one kind of positing of causes predominates more and more, is concentrated into a system, and finally emerges as *dominant*, that is, as simply precluding other causes and explanations.[^Portable Nietzsche, pp. 496–97.]
+<blockquote class="blockquote-page">
+
+  <p><em>The error of imaginary causes.</em> To begin with dreams: <em>ex post facto</em>, a cause is slipped under a particular sensation. […] What has happened? The representations which were <em>produced</em> by a certain state have been misunderstood as its causes.</p>
+
+  <p>Most of our general feelings…excite our causal instinct: we want to have a reason for feeling this way or that—for feeling bad or for feeling good. […] First principle: any explanation is better than none. Since at bottom it is merely a matter of wishing to be rid of oppressive representations, one is not too particular about the means of getting rid of them: the first representation that explains the unknown as familiar feels sos good that one “considers it true.” The proof of pleasure (“of strength”) as the criterion of truth.</p>
+
+  <p>[…] That which is new and strange and has not been experienced before, is excluded as a cause. Thus one searches for some kind of explanation to serve as a cause, but for a particularly selected and preferred kind of explanation—that which has most quickly and most frequently abolished the feeling of the strange, the new, and hitherto unexperienced: the <em>most habitual</em> explanations. Consequence: one kind of positing of causes predominates more and more, is concentrated into a system, and finally emerges as <em>dominant</em>, that is, as simply precluding other causes and explanations.</p>
+
+  <p class="small small-caps attribution">Friedrich Nietzsche</p>
+  <!-- Portable Nietzsche, pp. 496–97. -->
+
+
+  </blockquote>
 
 ### Introduction
 

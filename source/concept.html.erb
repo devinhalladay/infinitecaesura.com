@@ -1,9 +1,12 @@
-<h1>Articles tagged with <em><%= tagname %></em></h1>
+---
+layout: default_layout
+---
+<div class="main-column">
+  <h1>Entries filed under <em><%= tagname.capitalize %></em></h1>
 
-<ul>
-  <% blog.articles.each do |article, i| %>
-     <li>
-      <h2><%= link_to article.title, article %> </h2>
-    </li>
-  <% end %>
-</ul>
+  <ul>
+    <% blog.articles.select{|a| a.tags.include?(tagname)}.each do |article| %>
+      <%= partial "partials/post_list", :locals => { :article => article } %>
+    <% end %>
+  </ul>
+</div>

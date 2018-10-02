@@ -20,7 +20,7 @@ activate :blog do |b|
   b.sources = "posts/{year}-{month}-{day}-{title}.html"
   b.taglink = "concepts/{tag}.html"
   b.tag_template = "concept.html"
-  b.permalink = "{title}"
+  b.permalink = "posts/{title}"
   b.name = @app.data.site.title
   b.layout = "post"
 end
@@ -32,6 +32,8 @@ activate :directory_indexes
 page '/*.xml', layout: false
 page '/*.json', layout: false
 page '/*.txt', layout: false
+page '/', layout: 'default_layout'
+page '/posts/*', layout: 'post'
 
 # Configure asset builds
 configure :build do
