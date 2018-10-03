@@ -10,3 +10,6 @@ gem 'middleman-deploy', '~> 2.0.0.pre.alpha'
 # Redcarpet markdown
 gem 'redcarpet'
 gem 'nokogiri'
+
+gem 'fileutils'
+gem 'highline'

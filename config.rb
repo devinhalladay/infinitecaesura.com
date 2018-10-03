@@ -44,6 +44,17 @@ configure :build do
   activate :minify_javascript
 end
 
+helpers do
+  def nav_link(link, path, opts={})
+    if current_page.url == path
+      opts[:class] = "menu-link active"
+    else
+      opts[:class] = "menu-link"
+    end
+    link_to(link, path, opts)
+  end
+end
+
 # Deploy settings
 activate :deploy do |deploy|
   deploy.deploy_method = :rsync

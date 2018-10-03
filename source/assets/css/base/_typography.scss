@@ -79,6 +79,11 @@ hr {
   display: block;
   height: 1px;
   margin: 30px 0;
+  background-color: $color-meta;
+
+  &.hr-short {
+    width: 100px;
+  }
 }
 
 .meta {

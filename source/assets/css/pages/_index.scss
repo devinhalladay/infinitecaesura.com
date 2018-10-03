@@ -4,8 +4,24 @@ article {
   margin-bottom: 1em;
 
   .article-head {
-    .article-title h1 {
-      font-size: 1.6rem;
+    .article-title {
+      a {
+        h1 {
+          font-size: 1.6rem;
+
+          &:after {
+            display: inline-block;
+            content: url("data:image/svg+xml; utf8, <svg width='20' height='17' viewBox='0 0 20 17' fill='none' xmlns='http://www.w3.org/2000/svg'> <path d='M18.7674 8.5L10.7675 0.5M18.7674 8.5L10.7675 16.5M18.7674 8.5H0.767456' stroke='#{$color-text}' stroke-width='2'/> </svg>");
+            padding-left: 0.4em;
+          }
+        }
+
+        &:hover {
+          h1:after {
+            content: url("data:image/svg+xml; utf8, <svg width='20' height='17' viewBox='0 0 20 17' fill='none' xmlns='http://www.w3.org/2000/svg'> <path d='M18.7674 8.5L10.7675 0.5M18.7674 8.5L10.7675 16.5M18.7674 8.5H0.767456' stroke='#{$color-site}' stroke-width='2'/> </svg>");
+          }
+        }
+      }
     }
 
     .article-subtitle {

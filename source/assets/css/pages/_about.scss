@@ -1,0 +1,60 @@
+.about {
+  .sidebar {
+    grid-column: 1 / span 3;
+  }
+
+  .main-column {
+    grid-column: 5 / span 6;
+
+    @media (max-width: 1200px) {
+      grid-column: 3 / span 7;
+    }
+
+    @media (max-width: 950px) {
+      grid-column: 3 / span 8;
+    }
+
+    @media (max-width: 750px) {
+      grid-column: 2 / span 10;
+    }
+
+    @media (max-width: 680px) {
+      grid-column: 1 / span 11;
+    }
+
+    @media (max-width: 600px) {
+      grid-column: 1 / span 12;
+    }
+  }
+
+  h2 {
+    line-height: 1;
+    padding-bottom: 0.6em;
+  }
+
+  small {
+    display: block;
+
+    & + small {
+      padding-top: 1em;
+    }
+
+    h3 {
+      letter-spacing: 0;
+      font-size: 1.3em;
+      line-height: 1.4;
+    }
+  }
+
+  section + section {
+    padding-top: 2em;
+  }
+
+  p + p {
+    padding-top: 1.2em;
+  }
+
+  img {
+    padding-bottom: 0.6em;
+  }
+}
