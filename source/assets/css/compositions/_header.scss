@@ -100,6 +100,16 @@ header {
           }
         }
 
+        @media (max-width: 450px) {
+          padding-right: 0;
+          display: block;
+          text-align: right;
+
+          &:not(:nth-last-child(1)) {
+            padding-right: 0;
+          }
+        }
+
         a {
           text-decoration: none;
         }
@@ -114,6 +124,12 @@ header {
     grid-row: 1;
     grid-column: span 12;
     display: grid;
+
+    @media (max-width: 450px) {
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: .4em;
+    }
   }
 }
 

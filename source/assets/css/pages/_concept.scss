@@ -1,4 +1,7 @@
 .concepts {
+  display: flex;
+  flex-wrap: wrap;
+
   .intro {
     border-bottom: 1px solid #909090;
     margin-bottom: 1em;
@@ -7,5 +10,10 @@
 
   .concept-block {
     padding-bottom: 1em;
+    flex-basis: 25%;
+
+    @media (max-width: 1200px) {
+      flex-basis: 50%;
+    }
   }
 }
