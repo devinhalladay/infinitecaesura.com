@@ -13,3 +13,5 @@ gem 'nokogiri'
 
 gem 'fileutils'
 gem 'highline'
+
+gem 'builder'
