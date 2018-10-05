@@ -1,7 +1,6 @@
 ---
 title: The Birth of Datapower
 tags: power, privacy
-epistemic_status: Uncertain
 ---
 
 > *The error of imaginary causes.* To begin with dreams: *ex post facto*, a cause is slipped under a particular sensation. \[…] What has happened? The representations which were *produced* by a certain state have been misunderstood as its causes.

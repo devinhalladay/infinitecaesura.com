@@ -1,0 +1,17 @@
+.menu-right {
+  grid-column: 11 / -1;
+  text-align: right;
+
+  @media (max-width: 1000px) {
+    display: none;
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+  }
+
+  h3 {
+    margin: 0;
+  }
+}

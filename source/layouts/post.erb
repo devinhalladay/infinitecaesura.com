@@ -1,6 +1,8 @@
 <% wrap_layout :default_layout do %>
   <section class="article-head wide-column">
-    <small class="article-date"><%= current_page.date.strftime('%Y') %> &middot; <strong>Epistemic Status:</strong> <%= current_page.data.epistemic_status %></small>
+    <small class="article-date"><%= current_page.date.strftime('%Y') %>
+      <% if current_page.data.empistemic_status %> &middot; <strong>Epistemic Status:</strong> <%= current_page.data.epistemic_status %><% end %>
+    </small>
     <div class="article-title">
       <h1><%= current_page.title %></h1>
     </div>
@@ -23,6 +25,6 @@
       <%= yield %>
     </article>
 
-    <%= partial 'partials/newsletter_signup_bit' %>
+    <%= partial 'partials/newsletter_well' %>
   </section>
 <% end %>

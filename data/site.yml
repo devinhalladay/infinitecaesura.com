@@ -11,5 +11,15 @@ people:
       bio: >
           Devin Halladay is a design theorist and multidisciplinary designer. His practice attempts to merge theory with practice while drawing attention to the political potentials of everyday life and design practice.
   friends:
+    - name: Kristian Bjørnard
+      url: https://twitter.com/bjornmeansbear
     - name: Steve Kistner
-      url: http://with.sk
+      url: https://twitter.com/realstevehere
+    - name: Jarrett Fuller
+      url: https://twitter.com/jarrettfuller
+    - name: Firmin DeBrabander
+      url: https://www.mica.edu/undergraduate-majors-minors/humanistic-studies-major/firmin-debrabander/
+    - name: Ben Luzzatto
+      url: http://benluzzatto.com/
+    - name: Adam Culver
+      url: '#'

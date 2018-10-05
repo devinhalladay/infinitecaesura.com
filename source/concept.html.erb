@@ -2,11 +2,10 @@
 layout: default_layout
 ---
 <div class="main-column">
-  <h1>Entries filed under <em><%= tagname.capitalize %></em></h1>
+  <a href="/concepts/" class="back-link">View all concepts</a>
+  <h1 class="page-title">Entries filed under <em><%= tagname.capitalize %></em></h1>
 
-  <ul>
-    <% blog.articles.select{|a| a.tags.include?(tagname)}.each do |article| %>
-      <%= partial "partials/post_list", :locals => { :article => article } %>
-    <% end %>
-  </ul>
+  <% blog.articles.select{|a| a.tags.include?(tagname)}.each do |article| %>
+    <%= partial "partials/post_list", :locals => { :article => article } %>
+  <% end %>
 </div>

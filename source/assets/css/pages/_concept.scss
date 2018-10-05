@@ -8,6 +8,28 @@
     padding-bottom: 1.6em;
   }
 
+  .back-link {
+    color: $color-meta;
+
+    &:before {
+      display: inline-block;
+      content: url("data:image/svg+xml; utf8, <svg width='19' height='15' viewBox='0 0 19 15' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M1.01745 7.5L8.01742 14.5M1.01745 7.5L8.01743 0.499999M1.01745 7.5L18.0174 7.5' stroke='#{$color-meta}'/></svg>");
+      padding-right: 0.4em;
+    }
+
+    &:hover {
+      color: $color-site;
+
+      &:before {
+        content: url("data:image/svg+xml; utf8, <svg width='19' height='15' viewBox='0 0 19 15' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M1.01745 7.5L8.01742 14.5M1.01745 7.5L8.01743 0.499999M1.01745 7.5L18.0174 7.5' stroke='#{$color-site}'/></svg>");
+      }
+    }
+  }
+
+  .page-title {
+    padding-bottom: 1em;
+  }
+
   .concept-block {
     padding-bottom: 1em;
     flex-basis: 25%;

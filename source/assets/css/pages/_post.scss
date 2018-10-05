@@ -8,6 +8,10 @@
     }
   }
 
+  article {
+    border-bottom: 0;
+  }
+
   .article-body {
     p + p {
       padding-top: 1.2em;

@@ -1,0 +1,25 @@
+.newsletter-well {
+  background-color: rgba(24, 108, 239, 0.2);
+  border: 1px solid #186CEF;
+  border-radius: 6px;
+  padding: 20px;
+  color: $color-site;
+
+  h3 { margin: 0; }
+
+  p {
+    font-family: $font-serif;
+    font-weight: 500;
+    padding-bottom: 1em;
+  }
+
+  .button {
+    background-color: #186CEF;
+    color: white;
+    padding: 4px 20px;
+    margin-top: 10px;
+    border-radius: 6px;
+    display: inline-block;
+    text-decoration: none;
+  }
+}

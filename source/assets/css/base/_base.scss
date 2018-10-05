@@ -16,10 +16,15 @@ html {
 
 body {
   min-height: 100vh;
-  padding-bottom: 120px;
+  // padding-bottom: 120px;
   border-left: 10px solid $color-site;
   border-right: 10px solid $color-site;
   border-bottom: 10px solid $color-site;
+
+  @media (max-width: 500px) {
+    border-left: 0;
+    border-right: 0;
+  }
 
   &:before {
     content: "";
