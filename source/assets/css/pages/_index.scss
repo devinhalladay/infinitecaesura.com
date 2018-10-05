@@ -27,6 +27,7 @@ article {
     .article-subtitle {
       font-size: 1.2rem;
       padding-top: 0;
+      margin: 10px 0;
     }
   }
 
@@ -44,7 +45,6 @@ article {
 
       li {
         color: $color-meta;
-        font-size: 0.8em;
         list-style-type: none;
         display: inline-block;
 

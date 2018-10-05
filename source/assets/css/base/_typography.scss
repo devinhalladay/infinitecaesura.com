@@ -7,8 +7,10 @@
 
 h1, .h1,
 h2, .h2,
-h3, .h3 {
+h3, .h3,
+h4, .h4 {
   font-weight: 400;
+  font-family: $font-sans-serif;
 }
 
 h1, .h1 {
@@ -20,10 +22,10 @@ h3, .h3 {
   font-size: 1.111rem;
 }
 
-* + h2, * + .h2,
-* + h3, * + .h3 {
-  padding-top: 20px;
-}
+// * + h2, * + .h2,
+// * + h3, * + .h3 {
+//   padding-top: 20px;
+// }
 
 h1 {
   font-size: 2.2rem;
@@ -31,8 +33,21 @@ h1 {
 }
 
 h2, .h2 {
-  font-size: 1.8rem;
-  font-weight: 600;
+  // font-size: 1.8rem;
+  font-size: 1.7rem;
+  font-weight: 700;
+  line-height: 25px;
+  margin-top: 50px;
+  margin-bottom: 25px;
+  // font-weight: 600;
+
+  // & + p {
+  //   padding-top: .5em;
+  // }
+  //
+  // p + & {
+  //   padding-top: 1.5em;
+  // }
 }
 
 h3, .h3 {
@@ -43,14 +58,17 @@ h3, .h3 {
   letter-spacing: .025em;
   text-align: left;
   text-transform: uppercase;
-  font-size: 1.6em;
-  font-weight: 500;
+  font-size: 1.3em;
+  font-weight: 600;
+  margin-top: 50px;
+  margin-bottom: 25px;
 }
 
 h4, .h4 {
-  font-size: 1rem;
+  font-weight: 600;
+  margin-top: 20px;
+  margin-bottom: 10px;
   font-style: italic;
-  font-weight: 400;
 }
 
 a {
@@ -92,11 +110,13 @@ hr {
 
 blockquote {
   border-left: 2px solid $color-site;
-  margin: 0;
+  margin: 30px 0;
+  font-family: $font-sans-serif;
 
   p {
-    padding-left: 30px;
-    color: $color-meta;
+    padding-left: 1em;
+    margin-top: 10px;
+    font-weight: normal !important;
 
     &.attribution {
       color: $color-meta;
@@ -106,6 +126,10 @@ blockquote {
   p + & {
     margin: 1.6em 0;
   }
+}
+
+ul, ol {
+  margin: 20px;
 }
 
 // blockquote em, blockquote strong {

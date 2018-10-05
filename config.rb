@@ -5,7 +5,7 @@ set :markdown_engine, :redcarpet
 
 activate :external_pipeline,
   name: :webpack,
-  command: build? ? './node_modules/webpack/bin/webpack.js --bail' : './node_modules/webpack/bin/webpack.js --watch -d',
+  command: build? ?  "yarn run build" : "yarn run start",
   source: ".tmp/dist",
   latency: 1
 
@@ -34,6 +34,8 @@ page '/*.json', layout: false
 page '/*.txt', layout: false
 page '/', layout: 'default_layout'
 page '/posts/*', layout: 'post'
+
+config[:sass_source_maps] = true
 
 # Configure asset builds
 configure :build do

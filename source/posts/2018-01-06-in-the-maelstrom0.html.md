@@ -20,7 +20,7 @@ epistemic_status: Certain
 
   </blockquote>
 
-### Introduction
+## Introduction
 
 In this age of total darkness and uncertainty, there are innumerable paradoxes facing Americans—many of which are as intransigent and invisible to us as the air we breathe. The one I’d like to focus on in this essay is one that has gnawed at my thought for months: workers across large swathes of industries are alarmingly overworked, underpaid, and undervalued, while businesses themselves continue to profit exponentially off of their workers’ efforts. Even more worryingly, workers are actually beginning to produce considerably *higher* output while working progressively *less* hours. Humans are being squeezed to death by industry, and there is no end in sight. The sole cause of this, I think, is neoliberalism’s unwavering pursuit of productivity and efficiency—a pursuit that will undoubtedly prove to be socially, politically, and environmentally unsustainable. Indeed, proof of this is already rearing its head today.
 

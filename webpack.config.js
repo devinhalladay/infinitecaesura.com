@@ -1,50 +1,94 @@
 var webpack = require('webpack');
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var Clean = require('clean-webpack-plugin');
 
 module.exports = {
   entry: {
-    all: './source/assets/js/site.js',
+    js: '/source/assets/js/site.js',
   },
 
   resolve: {
-    root: __dirname + '/source/assets/js',
+    modules: [
+      __dirname + '/source/assets/js',
+      __dirname + '/source/assets/css',
+      __dirname + '/node_modules',
+    ],
+    extensions: ['.js', '.css', '.scss']
   },
 
   output: {
     path: __dirname + '/.tmp/dist',
-    filename: 'assets/js/[name].js',
+    filename: 'assets/javascript/[name].bundle.js',
   },
 
   module: {
     loaders: [
       {
-        test: /source\/javascripts\/.*\.js$/,
-        exclude: /node_modules|\.tmp|vendor/,
-        loader: 'babel-loader',
-        query: {
-          presets: ['es2015', 'stage-0'],
-        },
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: "babel-loader"
       },
       {
-        test: /\.(jpe?g|png|gif|svg)$/i,
-        loaders: [
-            'file?hash=sha512&digest=hex&name=[hash].[ext]',
-            'image-webpack?bypassOnDebug&optimizationLevel=7&interlaced=false'
-        ]
+        test: /\.css$/,
+        loader: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: [
+            'css-loader',
+            {
+              loader: 'postcss-loader',
+              options: {
+                plugins: function () {
+                  return [
+                    require('autoprefixer')
+                  ];
+                }
+              }
+            }
+          ]}),
+      },
+      {
+        test: /\.scss$|.sass$/,
+        loader: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: [
+            {
+    					loader: 'css-loader',
+    					options: {
+    						importLoaders: 3,
+    						sourceMap: true
+    					}
+    				}, {
+              loader: 'postcss-loader',
+              options: {
+                sourceMap: true,
+                plugins: function () {
+                  return [
+                    require('autoprefixer')
+                  ];
+                }
+              }
+            }, {
+                loader: "sass-loader",
+                options: {
+                  sourceMap: true
+                }
+              }
+          ]
+        }),
       }
-    ],
-  },
-
-  node: {
-    console: true,
+    ]
   },
 
   plugins: [
+    // Always expose NODE_ENV to webpack, in order to use `process.env.NODE_ENV`
+    // inside your code for any environment checks; UglifyJS will automatically
+    // drop any unreachable code.
+    new webpack.DefinePlugin({
+      'process.env': {
+        NODE_ENV: JSON.stringify(process.env.NODE_ENV),
+      },
+    }),
     new Clean(['.tmp']),
-      new webpack.ProvidePlugin({
-        $: "jquery",
-        jQuery: "jquery",
-        "window.jQuery": "jquery"
-    })
+    new ExtractTextPlugin("assets/css/[name].css"),
   ],
 };

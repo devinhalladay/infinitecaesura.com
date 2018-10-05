@@ -1,6 +1,15 @@
 .about {
   .sidebar {
     grid-column: 1 / span 3;
+
+    h3 {
+      margin: 0;
+    }
+
+    ul {
+      list-style-type: none;
+      margin: 0;
+    }
   }
 
   .main-column {
@@ -30,6 +39,7 @@
   h2 {
     line-height: 1;
     padding-bottom: 0.6em;
+    margin: 0;
   }
 
   small {

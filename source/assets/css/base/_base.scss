@@ -1,5 +1,5 @@
 html {
-  font: 108.25%/1.7 $font-sans-serif;
+  font: 112%/1.8 $font-sans-serif;
   color: $color-text;
   background-color: #fff;
   -webkit-font-smoothing: antialiased;
@@ -10,9 +10,7 @@ html {
           hyphens: auto;
 
   @media (max-width: 30rem) {
-    html {
-      font-size: 87.5%;
-    }
+    font-size: 106.5%;
   }
 }
 

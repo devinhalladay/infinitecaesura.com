@@ -3,3 +3,16 @@ article {
     padding-top: 1.2em;
   }
 }
+
+.article-body, .article-abstract {
+  font-family: $font-serif;
+  font-weight: 500;
+
+  p, ol, ul, em, i {
+    font-weight: 500;
+  }
+}
+
+.article-concepts {
+  margin: 0;
+}
