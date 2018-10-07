@@ -18,9 +18,14 @@
     }
   }
 
-  .article-date {
+  .article-date,
+  .article-word-count {
     color: $color-meta;
     font-family: $font-monospace;
+  }
+
+  .article-word-count {
+    padding-left: 0.8em;
   }
 
   .article-title {
@@ -28,7 +33,7 @@
     padding-top: 12px;
 
     h1 {
-     font-size: 2.5rem;
+     font-size: 2.2rem;
      font-weight: 600;
      line-height: 1.1;
    }

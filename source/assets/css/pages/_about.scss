@@ -93,6 +93,11 @@
     padding-top: 2em;
   }
 
+  section p {
+    font-family: $font-serif;
+    font-weight: 500;
+  }
+
   p + p {
     padding-top: 1.2em;
   }

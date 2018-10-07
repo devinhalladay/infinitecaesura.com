@@ -40,6 +40,11 @@ article {
       padding-right: 0.8em;
     }
 
+    .article-word-count,
+    .article-date {
+      color: $color-meta;
+    }
+
     .article-concepts {
       display: inline-block;
 

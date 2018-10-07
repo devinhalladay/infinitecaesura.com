@@ -16,3 +16,24 @@ article {
 .article-concepts {
   margin: 0;
 }
+
+.article-body {
+  h2:first-child {
+    margin-top: 0;
+  }
+}
+
+.footnotes {
+  font-size: 85%;
+  line-height: 1.6;
+  color: $color-meta;
+
+  ol {
+    margin: 0;
+
+    li {
+      padding-bottom: 1em;
+      &:target { color: $color-text; }
+    }
+  }
+}

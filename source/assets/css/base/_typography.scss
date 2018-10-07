@@ -1,8 +1,29 @@
-:not(.wf-loading) sup {
-  -webkit-font-feature-settings: "sups" 1;
-          font-feature-settings: "sups" 1;
-  font-size: inherit;
-  vertical-align: inherit;
+figure {
+  margin: 0;
+  margin-bottom: 1.7778rem;
+
+  img.bordered {
+    border: 1px solid $color-meta;
+  }
+
+  p {
+    font-size: 84%;
+    color: $color-meta;
+    font-family: $font-sans-serif;
+    font-weight: 400 !important;
+    line-height: 1.6;
+  }
+}
+
+p + figure {
+  margin-top: 1em;
+}
+
+sup {
+  font-family: $font-sans-serif;
+  color: $color-site;
+  a { text-decoration: none; }
+  line-height: 1;
 }
 
 h1, .h1,
@@ -30,25 +51,15 @@ h3, .h3 {
 
 h1 {
   font-size: 2.2rem;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 h2, .h2 {
-  // font-size: 1.8rem;
-  font-size: 1.7rem;
-  font-weight: 700;
+  font-size: 1.6rem;
+  font-weight: 500;
   line-height: 25px;
   margin-top: 50px;
   margin-bottom: 25px;
-  // font-weight: 600;
-
-  // & + p {
-  //   padding-top: .5em;
-  // }
-  //
-  // p + & {
-  //   padding-top: 1.5em;
-  // }
 }
 
 h3, .h3 {
@@ -59,13 +70,13 @@ h3, .h3 {
   letter-spacing: .025em;
   text-transform: uppercase;
   font-size: 1.3em;
-  font-weight: 600;
-  margin-top: 50px;
-  margin-bottom: 25px;
+  font-weight: 400;
+  margin-top: 40px;
+  margin-bottom: 10px;
 }
 
 h4, .h4 {
-  font-weight: 600;
+  font-weight: 500;
   margin-top: 20px;
   margin-bottom: 10px;
   font-style: italic;

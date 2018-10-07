@@ -3,6 +3,7 @@
     <small class="article-date"><%= current_page.date.strftime('%Y') %>
       <% if current_page.data.empistemic_status %> &middot; <strong>Epistemic Status:</strong> <%= current_page.data.epistemic_status %><% end %>
     </small>
+    <small class="article-word-count"><%= number_with_delimiter(current_page.body.split.size, :delimiter => ',') %> words / <% if current_page.body.split.size < 360 %>1 min<% else %><%= current_page.body.split.size/180 %> mins<% end %></small>
     <div class="article-title">
       <h1><%= current_page.title %></h1>
     </div>
@@ -14,7 +15,7 @@
       <p class="article-author"><a href="http://devinhalladay.com">Devin Halladay</a></p>
       <ul class="article-concepts">
         <% current_page.tags.each do |tag| %>
-          <li><%= link_to tag.capitalize, tag_path(tag) %></li>
+          <li><%= link_to tag.split.map(&:capitalize).join(' '), tag_path(tag) %></li>
         <% end %>
       </ul>
     </div>

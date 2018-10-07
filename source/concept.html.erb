@@ -3,7 +3,7 @@ layout: default_layout
 ---
 <div class="main-column">
   <a href="/concepts/" class="back-link">View all concepts</a>
-  <h1 class="page-title">Entries filed under <em><%= tagname.capitalize %></em></h1>
+  <h1 class="page-title">Entries filed under <em><%= tagname.split.map(&:capitalize).join(' ') %></em></h1>
 
   <% blog.articles.select{|a| a.tags.include?(tagname)}.each do |article| %>
     <%= partial "partials/post_list", :locals => { :article => article } %>

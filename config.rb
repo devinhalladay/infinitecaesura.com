@@ -1,7 +1,12 @@
 activate :livereload
 activate :autoprefixer
 
-set :markdown_engine, :redcarpet
+set :markdown_engine,
+    :redcarpet
+set :markdown,
+    :smartypants => true,
+    :footnotes => true,
+    :strikethrough => true
 
 activate :external_pipeline,
   name: :webpack,
@@ -18,6 +23,7 @@ set :fonts_dir, "assets/fonts"
 # Activate Blog
 activate :blog do |b|
   b.sources = "posts/{year}-{month}-{day}-{title}.html"
+  b.default_extension = ".md.erb"
   b.taglink = "concepts/{tag}.html"
   b.tag_template = "concept.html"
   b.permalink = "posts/{title}"

@@ -2,6 +2,10 @@
   display: flex;
   flex-wrap: wrap;
 
+  .page-title {
+    padding-bottom: 0.5em;
+  }
+
   .intro {
     border-bottom: 1px solid #909090;
     margin-bottom: 1em;

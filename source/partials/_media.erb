@@ -1,0 +1,14 @@
+<% if locals[:caption] %>
+  <figure role="img">
+<% else %>
+  <div>
+<% end %>
+    <%= image_tag locals[:src], alt: locals[:alt], title: locals[:title], class: locals[:imgClass] %>
+<% if locals[:caption] %>
+  <figcaption>
+    <p><%= locals[:caption] %></p>
+  </figcaption>
+</figure>
+<% else %>
+  </div>
+<% end %>

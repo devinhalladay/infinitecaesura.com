@@ -1,13 +1,10 @@
 html {
-  font: 112%/1.8 $font-sans-serif;
+  font: 108%/1.68 $font-sans-serif;
   color: $color-text;
   background-color: #fff;
   -webkit-font-smoothing: antialiased;
-  -webkit-font-feature-settings: "onum";
-          font-feature-settings: "onum";
-  -webkit-hyphens: auto;
-      -ms-hyphens: auto;
-          hyphens: auto;
+  font-feature-settings: "calt","liga","onum","pnum";
+  hyphens: auto;
 
   @media (max-width: 30rem) {
     font-size: 106.5%;
@@ -33,6 +30,7 @@ body {
     left: 0;
     right: 0;
     height: 10px;
+    z-index: 100;
   }
 
   &:before { top: 0; }

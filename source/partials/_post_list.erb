@@ -13,11 +13,13 @@
         <%= article.date.strftime('%Y') %>
       </small>
       <!-- <small><strong>Epistemic Status:</strong> <%= article.data.epistemic_status %></small> -->
-      <ul class="article-concepts">
-        <% article.tags.each do |tag| %>
-          <li><%= link_to tag.capitalize, tag_path(tag) %></li>
-        <% end %>
-      </ul>
+      <small><ul class="article-concepts">
+          <% article.tags.each do |tag| %>
+            <li><%= link_to tag.split.map(&:capitalize).join(' '), tag_path(tag) %></li>
+          <% end %>
+        </ul></small>
+
+      <small class="article-word-count"><%= number_with_delimiter(article.body.split.size, :delimiter => ',') %> words / <% if article.body.split.size < 360 %>1 min<% else %><%= article.body.split.size/180 %> mins<% end %></small>
     </div>
   </section>
 

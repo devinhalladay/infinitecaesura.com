@@ -1,5 +1,5 @@
 .newsletter-well {
-  background-color: rgba(24, 108, 239, 0.2);
+  background-color: rgba(24, 108, 239, 0.1);
   border: 1px solid #186CEF;
   border-radius: 6px;
   padding: 20px;
@@ -22,4 +22,8 @@
     display: inline-block;
     text-decoration: none;
   }
+}
+
+p + .newsletter-well {
+  margin-top: 2em;
 }
