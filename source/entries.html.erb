@@ -1,17 +1,12 @@
+---
+layout: default_layout
+title: Entries
+---
+
 <div class="main-column">
   <% blog.articles.each do |article| %>
     <%= partial "partials/post_list", :locals => { :article => article } %>
   <% end %>
 </div>
 
-<div class="menu-right">
-  <small>
-    <h4>Links</h4>
-    <ul>
-      <li><a href="http://are.na/devin-halladay">Are.na</a></li>
-      <li><a href="https://twitter.com/devinhalladay">Twitter</a></li>
-      <li><a href="mailto:inbox@infinitecaesura.com">Contact</a></li>
-      <li><a href="/feed.xml">RSS</a></li>
-    </ul>
-  </small>
-</div>
+<%= partial 'partials/menu_right' %>

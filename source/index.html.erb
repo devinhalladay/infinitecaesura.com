@@ -1,17 +1,36 @@
-<div class="main-column">
-  <% blog.articles.each do |article| %>
-    <%= partial "partials/post_list", :locals => { :article => article } %>
-  <% end %>
-</div>
+---
+customClass: post
+---
+<% content_for :title do %><%= blog.articles.last.title %><% end %>
 
-<div class="menu-right">
-  <small>
-    <h4>Links</h4>
-    <ul>
-      <li><a href="http://are.na/devin-halladay">Are.na</a></li>
-      <li><a href="https://twitter.com/devinhalladay">Twitter</a></li>
-      <li><a href="mailto:inbox@infinitecaesura.com">Contact</a></li>
-      <li><a href="/feed.xml">RSS</a></li>
-    </ul>
+<section class="article-head wide-column">
+  <small class="article-date"><%= blog.articles.last.date.strftime('%Y') %>
+    <% if blog.articles.last.data.empistemic_status %> &middot; <strong>Epistemic Status:</strong> <%= blog.articles.last.data.epistemic_status %><% end %>
   </small>
-</div>
+  <small class="article-word-count"><%= number_with_delimiter(blog.articles.last.body.split.size, :delimiter => ',') %> words / <% if blog.articles.last.body.split.size < 360 %>1 min<% else %><%= blog.articles.last.body.split.size/180 %> mins<% end %></small>
+  <div class="article-title">
+    <h1><%= blog.articles.last.title %></h1>
+  </div>
+
+  <div class="article-meta">
+    <% if blog.articles.last.data.subtitle %>
+    <h2 class="article-subtitle"><%= blog.articles.last.data.subtitle %></h2>
+    <% end %>
+    <p class="article-author"><a href="http://devinhalladay.com">Devin Halladay</a></p>
+    <ul class="article-concepts">
+      <% blog.articles.last.tags.each do |tag| %>
+        <li><%= link_to tag.split.map(&:capitalize).join(' '), tag_path(tag) %></li>
+      <% end %>
+    </ul>
+  </div>
+</section>
+
+<section class="main-column">
+  <article class="article-body">
+    <%= blog.articles.last.body %>
+  </article>
+
+  <%= partial 'partials/newsletter_well' %>
+</section>
+
+<%= partial 'partials/menu_right' %>

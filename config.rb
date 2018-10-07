@@ -1,3 +1,6 @@
+require 'tzinfo'
+Time.zone = 'US/Eastern'
+
 activate :livereload
 activate :autoprefixer
 
@@ -22,11 +25,11 @@ set :fonts_dir, "assets/fonts"
 
 # Activate Blog
 activate :blog do |b|
-  b.sources = "posts/{year}-{month}-{day}-{title}.html"
+  b.sources = "entries/{year}-{month}-{day}-{title}.html"
   b.default_extension = ".md.erb"
   b.taglink = "concepts/{tag}.html"
   b.tag_template = "concept.html"
-  b.permalink = "posts/{title}"
+  b.permalink = "entries/{title}"
   b.name = @app.data.site.title
   b.layout = "post"
 end
@@ -38,7 +41,7 @@ activate :directory_indexes
 page '/*.xml', layout: false
 page '/*.json', layout: false
 page '/*.txt', layout: false
-page '/', layout: 'default_layout'
+page '/', layout: 'default_layout', title: "test"
 page '/posts/*', layout: 'post'
 
 config[:sass_source_maps] = true

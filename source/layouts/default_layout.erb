@@ -3,7 +3,7 @@
   <head>
     <%= partial "partials/meta" %>
   </head>
-  <body class="<%= page_classes %> <%= current_page.options[:layout] %>">
+  <body class="<%= page_classes %> <%= current_page.options[:layout] %><% if current_page.data.customClass %> <%= current_page.data.customClass %><% end %>">
     <div class="container grid">
       <%= partial "partials/header" %>
       <%= yield %>

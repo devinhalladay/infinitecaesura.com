@@ -1,6 +1,8 @@
 ---
 layout: default_layout
 ---
+<% content_for :title do %><%= tagname.split.map(&:capitalize).join(' ') %><% end %>
+
 <div class="main-column">
   <a href="/concepts/" class="back-link">View all concepts</a>
   <h1 class="page-title">Entries filed under <em><%= tagname.split.map(&:capitalize).join(' ') %></em></h1>

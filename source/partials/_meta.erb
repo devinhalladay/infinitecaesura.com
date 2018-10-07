@@ -5,21 +5,24 @@
 <title>
   <% if current_page.data.title %>
     <%= "#{current_page.data.title} &mdash; #{data.site.title}" %>
+  <% elsif content_for?(:title) %>
+    <%= yield_content :title %> &mdash; <%= data.site.title %>
   <% else %>
     <%= data.site.title %>
   <% end %>
 </title>
+<link rel="icon" href="/favicon.ico" type="image/x-icon" />
 
-<meta property="twitter:card" content="summary">
-<meta property="twitter:site" content="@devinhalladay">
-<meta property="twitter:creator" content="@devinhalladay">
-<meta property="twitter:title" content="<% if current_page.data.title %><%= "#{current_page.data.title} &mdash; #{data.site.title}" %><% end %>">
-<meta property="twitter:description" content="<% if current_page.data.abstract %><%= current_page.data.abstract %><% else %><%= data.site.description %><% end %>">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@devinhalladay">
+<meta name="twitter:creator" content="@devinhalladay">
+<meta name="twitter:title" content="<% if current_page.data.title %><%= current_page.data.title %> &mdash; <%= data.site.title %><% else %><%= data.site.title %><% end %>">
+<meta name="twitter:description" content="<% if current_page.data.abstract %><%= current_page.data.abstract %><% else %><%= data.site.description %><% end %>">
 
 <meta property="og:type" content="website">
 <meta property="og:locale" content="en_us">
 <meta property="og:url" content="<%= data.site.url %><%= current_page.url %>">
-<meta property="og:title" content="<% if current_page.data.title %><%= "#{current_page.data.title} &mdash; #{data.site.title}" %><% else %>#{data.site.title}<% end %>">
+<meta property="og:title" content="<% if current_page.data.title %><%= current_page.data.title %> &mdash; <%= data.site.title %><% else %><%= data.site.title %><% end %>">
 <meta property="og:description" content="<% if current_page.data.abstract %><%= current_page.data.abstract %><% else %><%= data.site.description %><% end %>">
 <meta property="og:site_name" content="<%= data.site.title %>">
 
