@@ -1,6 +1,6 @@
 figure {
   margin: 0;
-  margin-bottom: 1.7778rem;
+  margin-bottom: 1em;
 
   img.bordered {
     border: 1px solid $color-meta;
@@ -32,6 +32,26 @@ h3, .h3,
 h4, .h4 {
   font-weight: 400;
   font-family: $font-sans-serif;
+  hyphens: none;
+
+  em {
+    font-weight: 400 !important;
+  }
+
+  &[id] {
+    &::before {
+      display: block;
+      content: " ";
+      margin-top: -160px;
+      height: 160px;
+      visibility: hidden;
+      pointer-events: none;
+    }
+  }
+}
+
+h2[id] {
+
 }
 
 h1, .h1 {
@@ -151,4 +171,8 @@ ul, ol {
   -webkit-font-feature-settings: "smcp", "c2sc", "lnum";
           font-feature-settings: "smcp", "c2sc", "lnum";
   letter-spacing: .05em;
+}
+
+.article-body p.attribution em {
+    font-weight: 400;
 }

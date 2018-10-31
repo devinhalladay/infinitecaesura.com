@@ -1,0 +1,12 @@
+.table-of-contents {
+  ul {
+    margin: 0;
+    font-size: 0.9em;
+    font-family: $font-sans-serif;
+    font-weight: 400;
+
+    li {
+      list-style-type: none;
+    }
+  }
+}

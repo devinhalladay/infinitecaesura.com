@@ -1,0 +1,19 @@
+.cross-post-nav {
+  margin: 0;
+  list-style: none;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  font-size: 0.9em;
+  font-family: $font-sans-serif;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 1em;
+
+  li {
+    font-weight: 400;
+  }
+
+  li:last-child {
+    text-align: right;
+  }
+}

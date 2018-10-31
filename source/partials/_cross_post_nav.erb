@@ -1,0 +1,15 @@
+<ul class="cross-post-nav">
+  <li>
+    <% next_article = current_article.next_article %>
+    <% if next_article %>
+      <a href="<%= next_article.url %>" rel="next" title="Next article: <%= next_article.title %>"><strong>Older:</strong> <%= next_article.title %></a>
+    <% end %>
+  </li>
+
+  <li>
+    <% prev_article = current_article.previous_article %>
+    <% if prev_article %>
+      <a href="<%= prev_article.url %>" rel="prev" title="Previous article: <%= prev_article.title %>"><strong>Newer:</strong> <%= prev_article.title %></a>
+    <% end %>
+  </li>
+ </ul>

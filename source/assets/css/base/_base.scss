@@ -1,5 +1,5 @@
 html {
-  font: 108%/1.68 $font-sans-serif;
+  font: 108%/1.78 $font-sans-serif;
   color: $color-text;
   background-color: #fff;
   -webkit-font-smoothing: antialiased;
@@ -7,31 +7,18 @@ html {
   hyphens: auto;
 
   @media (max-width: 30rem) {
-    font-size: 106.5%;
+    font-size: 100%;
   }
 }
 
 body {
   min-height: 100vh;
   // padding-bottom: 120px;
-  border-left: 10px solid $color-site;
-  border-right: 10px solid $color-site;
-  border-bottom: 10px solid $color-site;
+  border: 10px solid $color-site;
 
   @media (max-width: 500px) {
-    border-left: 0;
-    border-right: 0;
+    border: 0;
+    border-top: 10px solid $color-site;
+    border-bottom: 10px solid $color-site;
   }
-
-  &:before {
-    content: "";
-    position: fixed;
-    background: $color-site;
-    left: 0;
-    right: 0;
-    height: 10px;
-    z-index: 100;
-  }
-
-  &:before { top: 0; }
 }

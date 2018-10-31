@@ -1,3 +1,7 @@
+$LOAD_PATH.unshift("#{File.dirname(__FILE__)}/lib")
+require "custom_helpers"
+helpers CustomHelpers
+
 require 'tzinfo'
 Time.zone = 'US/Eastern'
 
@@ -9,7 +13,8 @@ set :markdown_engine,
 set :markdown,
     :smartypants => true,
     :footnotes => true,
-    :strikethrough => true
+    :strikethrough => true,
+    :with_toc_data => true
 
 activate :external_pipeline,
   name: :webpack,
@@ -73,6 +78,6 @@ activate :deploy do |deploy|
   deploy.user   = 'root'
   deploy.path   = '/var/www/infinitecaesura.com/public_html'
   # Set deploy.port to define a port for the deploy server. Defaults to 22.
-  deploy.clean = true # removes orphaned files on remote host, default: false
   deploy.flags = '--omit-dir-times -davz'
+  deploy.build_before = true
 end

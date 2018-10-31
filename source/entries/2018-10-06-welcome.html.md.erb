@@ -1,10 +1,10 @@
 ---
 title: A Brief Introduction
 date: 2018-10-06 20:03 UTC
-subtitle: Welcome to Infinite Caesura
 abstract: 'Infinite Caesura is a space for radical and speculative thinking maintained by Devin Halladay. Its purpose is to develop a holistic critical inquiry into the condition of the contemporary world and mind, delivering entries in the form of essays and aphorisms.'
 tags: 'infinite caesura'
 layout: post
+social_image: /assets/images/welcome/bubble.jpg
 ---
 
 <%= partial("partials/media", :locals => {
@@ -21,12 +21,17 @@ The caesura is a rupture in time, a pregnant moment: still, yet pluripotential. 
 This project is an *infinite* caesura. Written by [Devin Halladay](https://devinhalladay.com), this is a space for critical, radical, and speculative thought. Its purpose is to develop a holistic critical inquiry into the condition of the contemporary world and mind, delivering entries in the form of essays and aphorisms.
 
 Put another way, this space (or blog, if you prefer) is intended to generate concepts that are themselves generative --- active concepts which produce worlds in and of themselves, and which constitute a relational canon of concepts and ideas that act as a critical framework for understanding a world that is in a constant state of crisis.
-<hr class="hr-short">
+
+<%= partial("partials/media", :locals => {
+  :src => '/assets/images/welcome/leaves-of-lead.png',
+  :title => 'Leaves of Lead Collage',
+  :alt => 'Leaves of Lead',
+})%>
+
 In a more practical sense, this space is a substrate for my longer-form thoughts that [Twitter](https://twitter.com/devinhalladay) can't easily contain. In terms of content, you can expect to see long-reads, short aphorisms and poems, and an occasional link with commentary. However, you should also expect to see this blog's form and content shift as time goes on --- as a caesura, it is only natural that it should produce new conditions to replace the old.
 
 After months of my friends, colleagues, and professors pushing me to build a blog and start sharing my essays[^1], I've finally taken the first step. The space is here, and now all that remains is to fill it. Sounds simple enough --- but time will tell.
 
-<hr class="hr-short">
-Stay tuned next week for my first entry, *The Aesthetics of Automation*, a critique of the aesthetics of what I call "soft automation" in contemporary capitalism. Better yet, subscribe to the [newsletter](http://eepurl.com/c8ShB1) to find out when new entries are published!
+<%= partial 'partials/cross_post_nav' %>
 
 [^1]: In particular, I'd like to thank [Jarrett Fuller](http://twitter.com/jarrettfuller), [Steve Kistner](https://twitter.com/realstevehere), and [Firmin DeBrabander](https://www.mica.edu/undergraduate-majors-minors/humanistic-studies-major/firmin-debrabander/) for their constant support and encouragement, and for giving me the kick in the butt I needed to pull this site together.

@@ -13,11 +13,12 @@
 </title>
 <link rel="icon" href="/favicon.ico" type="image/x-icon" />
 
-<meta name="twitter:card" content="summary">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@devinhalladay">
 <meta name="twitter:creator" content="@devinhalladay">
 <meta name="twitter:title" content="<% if current_page.data.title %><%= current_page.data.title %> &mdash; <%= data.site.title %><% else %><%= data.site.title %><% end %>">
 <meta name="twitter:description" content="<% if current_page.data.abstract %><%= current_page.data.abstract %><% else %><%= data.site.description %><% end %>">
+<meta property="twitter:image" content="<% if current_page.data.social_image %><%= 'https://infinitecaesura.com' + current_page.data.social_image %><% else %>https://infinitecaesura.com/assets/images/seo-image.png <% end %>">
 
 <meta property="og:type" content="website">
 <meta property="og:locale" content="en_us">
@@ -25,6 +26,7 @@
 <meta property="og:title" content="<% if current_page.data.title %><%= current_page.data.title %> &mdash; <%= data.site.title %><% else %><%= data.site.title %><% end %>">
 <meta property="og:description" content="<% if current_page.data.abstract %><%= current_page.data.abstract %><% else %><%= data.site.description %><% end %>">
 <meta property="og:site_name" content="<%= data.site.title %>">
+<meta property="og:image" content="<% if current_page.data.social_image %><%= 'https://infinitecaesura.com' + current_page.data.social_image %><% else %>https://infinitecaesura.com/assets/images/seo-image.png<% end %>">
 
 <%= stylesheet_link_tag "site" %>
 <link rel="stylesheet" href="https://use.typekit.net/lbu2tns.css">
