@@ -40,8 +40,8 @@ task :post do
   # Define the draft's filename.
   file = File.join(
     File.dirname(__FILE__),
-    'source/posts',
-    "#{DATE}-#{slug_fixed}.md"
+    'source/entries',
+    "#{DATE}-#{slug_fixed}.html.md.erb"
   )
 
   # Create the draft file in the location defined above
