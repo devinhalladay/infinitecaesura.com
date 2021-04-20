@@ -8,11 +8,14 @@
       <% end %>
     </div>
 
+    <% if article.data.epistemic_status %>
+      <small><strong>Epistemic Status:</strong> <%= article.data.epistemic_status %></small>
+    <% end %> 
+    
     <div class="article-meta">
       <small class="article-date">
         <%= article.date.strftime('%Y') %>
-      </small>
-      <!-- <small><strong>Epistemic Status:</strong> <%= article.data.epistemic_status %></small> -->
+      </small>     
       <small><ul class="article-concepts">
           <% article.tags.each do |tag| %>
             <li><%= link_to tag.split.map(&:capitalize).join(' '), tag_path(tag) %></li>
@@ -22,12 +25,4 @@
       <small class="article-word-count"><%= number_with_delimiter(article.body.split.size, :delimiter => ',') %> words / <% if article.body.split.size < 360 %>1 min<% else %><%= article.body.split.size/180 %> mins<% end %></small>
     </div>
   </section>
-
-  <% if article.data.abstract %>
-    <p class="article-abstract">
-      <%= article.data.abstract %>
-    </p>
-
-    <a href="<%= article.url %>">Read more…</a>
-  <% end %>
 </article>

@@ -3,3 +3,45 @@
 @import "layouts/all";
 @import "pages/all";
 @import "compositions/all";
+
+ul.terms {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+li.term {
+  display: inline-block;
+  transition: 0.4s all ease;
+  font-size: 2rem;
+  align-items: center;
+  line-height: 0.9;
+  margin-bottom: 0.5em;
+  
+  &:not(:last-child) {
+    padding-right: 15px;
+  }
+
+  &.no-definitions {
+    color: grey;
+    cursor: not-allowed;
+  }
+  
+  a {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+  }
+
+  img {
+    height: 40px;
+    padding-right: 10px;
+  }
+}
+
+sup {
+  font-size: 20px;
+  color: gray
+}
