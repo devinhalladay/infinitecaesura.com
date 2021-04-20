@@ -1,29 +1,36 @@
 ---
-layout: default_layout
+customClass: post
 ---
-<% terms = [] %>
-<% blog.tags.each do |tag, articles| %>
-  <% terms.push([tag, articles]) %>
-<% end %>
-<% terms = terms.sort_by{ |(term, articles)| articles.size }.reverse %>
+<% content_for :title do %><%= blog.articles.first.title %><% end %>
 
+<section class="article-head wide-column">
+  <small class="article-date"><%= blog.articles.first.date.strftime('%Y') %>
+    <% if blog.articles.first.data.empistemic_status %> &middot; <strong>Epistemic Status:</strong> <%= blog.articles.first.data.epistemic_status %><% end %>
+  </small>
+  <small class="article-word-count"><%= number_with_delimiter(blog.articles.first.body.split.size, :delimiter => ',') %> words / <% if blog.articles.first.body.split.size < 360 %>1 min<% else %><%= blog.articles.first.body.split.size/180 %> mins<% end %></small>
+  <div class="article-title">
+    <a href="<%= blog.articles.first.url %>"><h1><%= blog.articles.first.title %></h1></a>
+  </div>
 
-<div class="main-column">
-  <ul class="terms">
-    <% terms.each_with_index do |(term, articles), i| %>
-      <% articlesWithImages = blog.articles.select { |article| article.data.tags.include?(term[0]) && article.data.image } %>
-      <% articlesImages = [] %>
-
-      <% articlesWithImages.each do |article| %><% articlesImages << article.data.image %><% end %>
-
-      <li class="term">
-        <a href="<%= tag_path(term) %>" <% if articlesImages %>data-imagelink="<%= articlesImages.first %>"<% end %>>
-          <% if articlesImages %><img class="thumbnail" src="<%= articlesImages.first %>"><% end %>
-          <span class="term-title">
-            <%= term %><sup>(<%= articles.size %>)</sup><% if i != blog.tags.size %>,<% end %>
-          </span>
-        </a>
-      </li>
+  <div class="article-meta">
+    <% if blog.articles.first.data.subtitle %>
+    <h2 class="article-subtitle"><%= blog.articles.first.data.subtitle %></h2>
     <% end %>
-  </ul>
-</div>
+    <p class="article-author"><a href="http://devinhalladay.com">Devin Halladay</a></p>
+    <ul class="article-concepts">
+      <% blog.articles.first.tags.each do |tag| %>
+        <li><%= link_to tag.split.map(&:capitalize).join(' '), tag_path(tag) %></li>
+      <% end %>
+    </ul>
+  </div>
+</section>
+
+<section class="main-column">
+  <article class="article-body">
+    <%= blog.articles.first.body %>
+  </article>
+
+  <%= partial 'partials/newsletter_well' %>
+</section>
+
+<%= partial 'partials/menu_right' %>
